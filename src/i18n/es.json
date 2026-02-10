@@ -1,3 +1,16 @@
 {
-  "hello": "Hola Mundo"
+  "hello": "Hola Mundo",
+  "app": {
+    "title": "Explorador de Nodos",
+    "subtitle": "Visualiza y navega la estructura jerárquica"
+  },
+  "language": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  }
 }

@@ -1,3 +1,16 @@
 {
-  "hello": "Hello World"
+  "hello": "Hello World",
+  "app": {
+    "title": "Node Explorer",
+    "subtitle": "Visualize and navigate the hierarchical structure"
+  },
+  "language": {
+    "es": "Spanish",
+    "en": "English"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode"
+  }
 }
