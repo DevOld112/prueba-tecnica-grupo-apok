@@ -7,5 +7,10 @@
   "language": {
     "es": "Spanish",
     "en": "English"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode"
   }
 }

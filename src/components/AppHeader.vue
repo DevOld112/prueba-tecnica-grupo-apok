@@ -6,10 +6,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FolderTree, Globe } from "lucide-vue-next";
+import { useTheme } from "@/composables/useTheme";
+import { FolderTree, Globe, Moon, Sun } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 
 const { t, locale } = useI18n();
+const { theme, toggleTheme } = useTheme();
 
 function setLocale(lang: string) {
   locale.value = lang;
@@ -39,29 +41,56 @@ function setLocale(lang: string) {
         </div>
       </div>
 
-      <!-- Language Switcher -->
-      <DropdownMenu>
-        <DropdownMenuTrigger as-child>
-          <Button variant="outline" size="sm" class="gap-2">
-            <Globe class="h-4 w-4" />
-            <span class="hidden sm:inline">{{ t(`language.${locale}`) }}</span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem
-            @click="setLocale('es')"
-            :class="{ 'bg-accent': locale === 'es' }"
-          >
-            🇪🇸 {{ t("language.es") }}
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            @click="setLocale('en')"
-            :class="{ 'bg-accent': locale === 'en' }"
-          >
-            🇺🇸 {{ t("language.en") }}
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <div class="flex items-center gap-2">
+        <!-- Theme Toggle -->
+        <Button
+          id="theme-toggle"
+          variant="outline"
+          size="icon"
+          class="relative h-9 w-9 cursor-pointer"
+          :aria-label="t('theme.toggle')"
+          @click="toggleTheme"
+        >
+          <Sun
+            class="h-4 w-4 transition-all duration-300"
+            :class="
+              theme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'
+            "
+          />
+          <Moon
+            class="absolute h-4 w-4 transition-all duration-300"
+            :class="
+              theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'
+            "
+          />
+        </Button>
+
+        <!-- Language Switcher -->
+        <DropdownMenu>
+          <DropdownMenuTrigger as-child>
+            <Button variant="outline" size="sm" class="gap-2">
+              <Globe class="h-4 w-4" />
+              <span class="hidden sm:inline">{{
+                t(`language.${locale}`)
+              }}</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem
+              @click="setLocale('es')"
+              :class="{ 'bg-accent': locale === 'es' }"
+            >
+              🇪🇸 {{ t("language.es") }}
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              @click="setLocale('en')"
+              :class="{ 'bg-accent': locale === 'en' }"
+            >
+              🇺🇸 {{ t("language.en") }}
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </div>
   </header>
 </template>
