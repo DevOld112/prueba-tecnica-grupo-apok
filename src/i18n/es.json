@@ -14,6 +14,7 @@
     "dark": "Modo oscuro"
   },
   "errors": {
+    "title": "Error",
     "fetch_parent": "Error al obtener nodos padres",
     "fetch_children": "Error al obtener nodos hijos",
     "create_node": "Error al crear el nodo",
