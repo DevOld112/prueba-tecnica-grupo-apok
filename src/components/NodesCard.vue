@@ -34,7 +34,9 @@ const handleNavigate = async () => {
     >
       <Folder v-if="true" class="w-5 h-5 text-blue-500" />
 
-      <span class="font-medium">{{ node.title }}</span>
+      <span class="font-medium">{{
+        node.locales?.[$i18n.locale] || node.title
+      }}</span>
     </div>
 
     <DeleteNodeDialog :nodeId="node.id">
