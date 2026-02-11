@@ -11,35 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useNodeStore } from "@/stores/nodes";
+import { useNodes } from "@/composables/useNodes";
 import { Plus } from "lucide-vue-next";
-import { ref } from "vue";
 import { useI18n } from "vue-i18n";
-import { toast } from "vue-sonner";
 
 const { t } = useI18n();
-const store = useNodeStore();
-const { addNode } = store;
+const { open, loading, handleCreate, nameEn, nameEs } = useNodes()
 
-const open = ref(false);
-const nodeName = ref("");
-const loading = ref(false);
-
-const handleCreate = async () => {
-  if (!nodeName.value.trim()) return;
-
-  loading.value = true;
-  try {
-    await addNode(nodeName.value);
-    toast.success(t("home.create_node.success"));
-    nodeName.value = "";
-    open.value = false;
-  } catch (e) {
-    toast.error(e instanceof Error ? e.message : t("errors.create_failed"));
-  } finally {
-    loading.value = false;
-  }
-};
 </script>
 
 <template>
@@ -59,12 +37,23 @@ const handleCreate = async () => {
       </DialogHeader>
       <div class="grid gap-4 py-4">
         <div class="grid grid-cols-4 items-center gap-4">
-          <Label htmlFor="name" class="text-right">
-            {{ t("home.create_node.name_label") }}
+          <Label htmlFor="name-es" class="text-right leading-tight">
+            {{ t("home.create_node.name_es_label") }}
           </Label>
           <Input
-            id="name"
-            v-model="nodeName"
+            id="name-es"
+            v-model="nameEs"
+            :placeholder="t('home.create_node.placeholder')"
+            class="col-span-3"
+          />
+        </div>
+        <div class="grid grid-cols-4 items-center gap-4">
+          <Label htmlFor="name-en" class="text-right leading-tight">
+            {{ t("home.create_node.name_en_label") }}
+          </Label>
+          <Input
+            id="name-en"
+            v-model="nameEn"
             :placeholder="t('home.create_node.placeholder')"
             class="col-span-3"
             @keyup.enter="handleCreate"
@@ -78,7 +67,7 @@ const handleCreate = async () => {
         <Button
           type="submit"
           @click="handleCreate"
-          :disabled="loading || !nodeName.trim()"
+          :disabled="loading || !nameEn.trim() || !nameEs.trim()"
         >
           {{ loading ? t("home.loading") : t("home.create_node.confirm") }}
         </Button>

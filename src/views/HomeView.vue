@@ -18,7 +18,7 @@ import { onMounted } from "vue";
 
 const store = useNodeStore();
 const { breadcrumb, loading, error, nodes } = storeToRefs(store);
-const { navigateToRoot, navigateTo } = store;
+const { navigateToRoot, navigateTo } = useNodeStore();
 
 onMounted(async () => {
   await navigateToRoot();
@@ -56,10 +56,10 @@ const handleRootClick = () => {
                 href="#"
                 @click.prevent="handleBreadcrumbClick(item)"
               >
-                {{ item.title }}
+                {{ item.locales?.[$i18n.locale] || item.title }}
               </BreadcrumbLink>
               <BreadcrumbPage v-else>
-                {{ item.title }}
+                {{ item.locales?.[$i18n.locale] || item.title }}
               </BreadcrumbPage>
             </BreadcrumbItem>
             <BreadcrumbSeparator v-if="index < breadcrumb.length - 1" />

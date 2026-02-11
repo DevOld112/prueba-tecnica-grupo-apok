@@ -35,7 +35,11 @@ export const useNodeStore = defineStore("nodes", () => {
 
   async function navigateInto(node: Node) {
     currentParentId.value = node.id;
-    breadcrumb.value.push({ id: node.id, title: node.title });
+    breadcrumb.value.push({
+      id: node.id,
+      title: node.title,
+      locales: node.locales,
+    });
     await fetchNodes();
   }
 
@@ -54,10 +58,10 @@ export const useNodeStore = defineStore("nodes", () => {
     await fetchNodes();
   }
 
-  async function addNode(title: string) {
+  async function addNode(locales: Record<string, string>) {
     error.value = null;
     try {
-      await api.createNode(currentParentId.value, title);
+      await api.createNode(currentParentId.value, locales);
       await fetchNodes();
     } catch (e) {
       error.value =

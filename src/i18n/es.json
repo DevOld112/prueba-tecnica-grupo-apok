@@ -39,6 +39,8 @@
       "trigger": "Nuevo Nodo",
       "title": "Crear Nodo",
       "name_label": "Nombre",
+      "name_en_label": "Nombre (Inglés)",
+      "name_es_label": "Nombre (Español)",
       "placeholder": "Ingresa el nombre",
       "cancel": "Cancelar",
       "confirm": "Crear",

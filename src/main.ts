@@ -1,6 +1,8 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
+
 import "../src/assets/index.css";
+import "../src/assets/sonner.css";
 import i18n from "./i18n";
 
 import App from "./App.vue";

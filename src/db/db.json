@@ -3,402 +3,643 @@
     {
       "id": 1,
       "parent": null,
-      "title": "Documents"
+      "locales": {
+        "en": "Documents",
+        "es": "Documentos"
+      }
     },
     {
       "id": 2,
       "parent": null,
-      "title": "Images"
+      "locales": {
+        "en": "Images",
+        "es": "Imágenes"
+      }
     },
     {
       "id": 3,
       "parent": null,
-      "title": "Projects"
-    },
-    {
-      "id": 4,
-      "parent": null,
-      "title": "Downloads"
+      "locales": {
+        "en": "Projects",
+        "es": "Proyectos"
+      }
     },
     {
       "id": 5,
       "parent": 1,
-      "title": "Personal"
+      "locales": {
+        "en": "Personal",
+        "es": "Personal"
+      }
     },
     {
       "id": 6,
       "parent": 1,
-      "title": "Work"
+      "locales": {
+        "en": "Work",
+        "es": "Trabajo"
+      }
     },
     {
       "id": 7,
       "parent": 1,
-      "title": "Recipes"
+      "locales": {
+        "en": "Recipes",
+        "es": "Recetas"
+      }
     },
     {
       "id": 8,
       "parent": 5,
-      "title": "Resume.pdf"
+      "locales": {
+        "en": "Resume.pdf",
+        "es": "Currículum.pdf"
+      }
     },
     {
       "id": 9,
       "parent": 5,
-      "title": "Budget.xlsx"
+      "locales": {
+        "en": "Budget.xlsx",
+        "es": "Presupuesto.xlsx"
+      }
     },
     {
       "id": 10,
       "parent": 6,
-      "title": "Q1 Report"
+      "locales": {
+        "en": "Q1 Report",
+        "es": "Informe Q1"
+      }
     },
     {
       "id": 11,
       "parent": 6,
-      "title": "Notes"
+      "locales": {
+        "en": "Notes",
+        "es": "Notas"
+      }
     },
     {
       "id": 12,
       "parent": 6,
-      "title": "Presentations"
+      "locales": {
+        "en": "Presentations",
+        "es": "Presentaciones"
+      }
     },
     {
       "id": 13,
       "parent": 2,
-      "title": "Vacations"
+      "locales": {
+        "en": "Vacations",
+        "es": "Vacaciones"
+      }
     },
     {
       "id": 14,
       "parent": 2,
-      "title": "Screenshots"
+      "locales": {
+        "en": "Screenshots",
+        "es": "Capturas de Pantalla"
+      }
     },
     {
       "id": 15,
       "parent": 13,
-      "title": "Summer 2024"
+      "locales": {
+        "en": "Summer 2024",
+        "es": "Verano 2024"
+      }
     },
     {
       "id": 16,
       "parent": 13,
-      "title": "Winter Trip"
+      "locales": {
+        "en": "Winter Trip",
+        "es": "Viaje de Invierno"
+      }
     },
     {
       "id": 17,
       "parent": 15,
-      "title": "Beach.jpg"
+      "locales": {
+        "en": "Beach.jpg",
+        "es": "Playa.jpg"
+      }
     },
     {
       "id": 18,
       "parent": 15,
-      "title": "Hotel.jpg"
+      "locales": {
+        "en": "Hotel.jpg",
+        "es": "Hotel.jpg"
+      }
     },
     {
       "id": 19,
       "parent": 3,
-      "title": "Website Redesign"
+      "locales": {
+        "en": "Website Redesign",
+        "es": "Rediseño Web"
+      }
     },
     {
       "id": 20,
       "parent": 3,
-      "title": "Mobile App"
+      "locales": {
+        "en": "Mobile App",
+        "es": "App Móvil"
+      }
     },
     {
       "id": 21,
       "parent": 19,
-      "title": "Mockups"
+      "locales": {
+        "en": "Mockups",
+        "es": "Maquetas"
+      }
     },
     {
       "id": 22,
       "parent": 19,
-      "title": "Assets"
+      "locales": {
+        "en": "Assets",
+        "es": "Recursos"
+      }
     },
     {
       "id": 23,
       "parent": 21,
-      "title": "Home_v1.fig"
+      "locales": {
+        "en": "Home_v1.fig",
+        "es": "Home_v1.fig"
+      }
     },
     {
       "id": 24,
       "parent": 1,
-      "title": "Invoices"
+      "locales": {
+        "en": "Invoices",
+        "es": "Facturas"
+      }
     },
     {
       "id": 25,
       "parent": 24,
-      "title": "2024"
+      "locales": {
+        "en": "2024",
+        "es": "2024"
+      }
     },
     {
       "id": 26,
       "parent": 25,
-      "title": "January"
+      "locales": {
+        "en": "January",
+        "es": "Enero"
+      }
     },
     {
       "id": 27,
       "parent": 25,
-      "title": "February"
+      "locales": {
+        "en": "February",
+        "es": "Febrero"
+      }
     },
     {
       "id": 28,
       "parent": null,
-      "title": "Music"
+      "locales": {
+        "en": "Music",
+        "es": "Música"
+      }
     },
     {
       "id": 29,
       "parent": 28,
-      "title": "Rock"
+      "locales": {
+        "en": "Rock",
+        "es": "Rock"
+      }
     },
     {
       "id": 30,
       "parent": 28,
-      "title": "Jazz"
+      "locales": {
+        "en": "Jazz",
+        "es": "Jazz"
+      }
     },
     {
       "id": 31,
       "parent": 28,
-      "title": "Classical"
+      "locales": {
+        "en": "Classical",
+        "es": "Clásica"
+      }
     },
     {
       "id": 32,
       "parent": 29,
-      "title": "The Beatles"
+      "locales": {
+        "en": "The Beatles",
+        "es": "The Beatles"
+      }
     },
     {
       "id": 33,
       "parent": 29,
-      "title": "Queen"
+      "locales": {
+        "en": "Queen",
+        "es": "Queen"
+      }
     },
     {
       "id": 34,
       "parent": 32,
-      "title": "Abbey Road"
+      "locales": {
+        "en": "Abbey Road",
+        "es": "Abbey Road"
+      }
     },
     {
       "id": 35,
       "parent": 32,
-      "title": "Let It Be"
+      "locales": {
+        "en": "Let It Be",
+        "es": "Let It Be"
+      }
     },
     {
       "id": 36,
       "parent": 33,
-      "title": "Bohemian Rhapsody"
+      "locales": {
+        "en": "Bohemian Rhapsody",
+        "es": "Bohemian Rhapsody"
+      }
     },
     {
       "id": 37,
       "parent": 30,
-      "title": "Miles Davis"
+      "locales": {
+        "en": "Miles Davis",
+        "es": "Miles Davis"
+      }
     },
     {
       "id": 38,
       "parent": 37,
-      "title": "Kind of Blue"
+      "locales": {
+        "en": "Kind of Blue",
+        "es": "Kind of Blue"
+      }
     },
     {
       "id": 39,
       "parent": null,
-      "title": "Movies"
+      "locales": {
+        "en": "Movies",
+        "es": "Películas"
+      }
     },
     {
       "id": 40,
       "parent": 39,
-      "title": "Action"
+      "locales": {
+        "en": "Action",
+        "es": "Acción"
+      }
     },
     {
       "id": 41,
       "parent": 39,
-      "title": "Comedy"
+      "locales": {
+        "en": "Comedy",
+        "es": "Comedia"
+      }
     },
     {
       "id": 42,
       "parent": 39,
-      "title": "Sci-Fi"
+      "locales": {
+        "en": "Sci-Fi",
+        "es": "Ciencia Ficción"
+      }
     },
     {
       "id": 43,
       "parent": 40,
-      "title": "Mad Max"
+      "locales": {
+        "en": "Mad Max",
+        "es": "Mad Max"
+      }
     },
     {
       "id": 44,
       "parent": 40,
-      "title": "John Wick"
+      "locales": {
+        "en": "John Wick",
+        "es": "John Wick"
+      }
     },
     {
       "id": 45,
       "parent": 42,
-      "title": "Inception"
+      "locales": {
+        "en": "Inception",
+        "es": "El Origen"
+      }
     },
     {
       "id": 46,
       "parent": 42,
-      "title": "Interstellar"
+      "locales": {
+        "en": "Interstellar",
+        "es": "Interestelar"
+      }
     },
     {
       "id": 47,
       "parent": null,
-      "title": "Development"
+      "locales": {
+        "en": "Development",
+        "es": "Desarrollo"
+      }
     },
     {
       "id": 48,
       "parent": 47,
-      "title": "Backend"
+      "locales": {
+        "en": "Backend",
+        "es": "Backend"
+      }
     },
     {
       "id": 49,
       "parent": 47,
-      "title": "Frontend"
+      "locales": {
+        "en": "Frontend",
+        "es": "Frontend"
+      }
     },
     {
       "id": 50,
       "parent": 47,
-      "title": "DevOps"
+      "locales": {
+        "en": "DevOps",
+        "es": "DevOps"
+      }
     },
     {
       "id": 51,
       "parent": 48,
-      "title": "Node.js"
+      "locales": {
+        "en": "Node.js",
+        "es": "Node.js"
+      }
     },
     {
       "id": 52,
       "parent": 48,
-      "title": "Python"
+      "locales": {
+        "en": "Python",
+        "es": "Python"
+      }
     },
     {
       "id": 53,
       "parent": 48,
-      "title": "Go"
+      "locales": {
+        "en": "Go",
+        "es": "Go"
+      }
     },
     {
       "id": 54,
       "parent": 49,
-      "title": "Vue.js"
+      "locales": {
+        "en": "Vue.js",
+        "es": "Vue.js"
+      }
     },
     {
       "id": 55,
       "parent": 49,
-      "title": "React"
+      "locales": {
+        "en": "React",
+        "es": "React"
+      }
     },
     {
       "id": 57,
       "parent": 54,
-      "title": "Components"
+      "locales": {
+        "en": "Components",
+        "es": "Componentes"
+      }
     },
     {
       "id": 58,
       "parent": 54,
-      "title": "Pinia Store"
+      "locales": {
+        "en": "Pinia Store",
+        "es": "Pinia Store"
+      }
     },
     {
       "id": 59,
       "parent": 54,
-      "title": "Router"
+      "locales": {
+        "en": "Router",
+        "es": "Router"
+      }
     },
     {
       "id": 60,
       "parent": 50,
-      "title": "Docker"
+      "locales": {
+        "en": "Docker",
+        "es": "Docker"
+      }
     },
     {
       "id": 61,
       "parent": 50,
-      "title": "Kubernetes"
+      "locales": {
+        "en": "Kubernetes",
+        "es": "Kubernetes"
+      }
     },
     {
       "id": 62,
       "parent": 50,
-      "title": "AWS"
+      "locales": {
+        "en": "AWS",
+        "es": "AWS"
+      }
     },
     {
       "id": 63,
       "parent": 60,
-      "title": "Dockerfile"
+      "locales": {
+        "en": "Dockerfile",
+        "es": "Dockerfile"
+      }
     },
     {
       "id": 64,
       "parent": 60,
-      "title": "docker-compose.yml"
+      "locales": {
+        "en": "docker-compose.yml",
+        "es": "docker-compose.yml"
+      }
     },
     {
       "id": 65,
       "parent": null,
-      "title": "Books"
+      "locales": {
+        "en": "Books",
+        "es": "Libros"
+      }
     },
     {
       "id": 66,
       "parent": 65,
-      "title": "Fiction"
+      "locales": {
+        "en": "Fiction",
+        "es": "Ficción"
+      }
     },
     {
       "id": 67,
       "parent": 65,
-      "title": "Non-Fiction"
+      "locales": {
+        "en": "Non-Fiction",
+        "es": "No Ficción"
+      }
     },
     {
       "id": 68,
       "parent": 66,
-      "title": "Harry Potter"
+      "locales": {
+        "en": "Harry Potter",
+        "es": "Harry Potter"
+      }
     },
     {
       "id": 69,
       "parent": 66,
-      "title": "Lord of the Rings"
+      "locales": {
+        "en": "Lord of the Rings",
+        "es": "El Señor de los Anillos"
+      }
     },
     {
       "id": 70,
       "parent": 67,
-      "title": "Sapiens"
+      "locales": {
+        "en": "Sapiens",
+        "es": "Sapiens"
+      }
     },
     {
       "id": 71,
       "parent": 67,
-      "title": "Atomic Habits"
+      "locales": {
+        "en": "Atomic Habits",
+        "es": "Hábitos Atómicos"
+      }
     },
     {
       "id": 72,
       "parent": null,
-      "title": "Finance"
+      "locales": {
+        "en": "Finance",
+        "es": "Finanzas"
+      }
     },
     {
       "id": 73,
       "parent": 72,
-      "title": "Taxes"
+      "locales": {
+        "en": "Taxes",
+        "es": "Impuestos"
+      }
     },
     {
       "id": 74,
       "parent": 72,
-      "title": "Investments"
+      "locales": {
+        "en": "Investments",
+        "es": "Inversiones"
+      }
     },
     {
       "id": 75,
       "parent": 73,
-      "title": "2023 Returns"
+      "locales": {
+        "en": "2023 Returns",
+        "es": "Declaración 2023"
+      }
     },
     {
       "id": 76,
       "parent": 73,
-      "title": "2024 Returns"
+      "locales": {
+        "en": "2024 Returns",
+        "es": "Declaración 2024"
+      }
     },
     {
       "id": 77,
       "parent": 74,
-      "title": "Stocks"
+      "locales": {
+        "en": "Stocks",
+        "es": "Acciones"
+      }
     },
     {
       "id": 78,
       "parent": 74,
-      "title": "Crypto"
+      "locales": {
+        "en": "Crypto",
+        "es": "Cripto"
+      }
     },
     {
       "id": 79,
       "parent": 77,
-      "title": "Tech Portfolio"
+      "locales": {
+        "en": "Tech Portfolio",
+        "es": "Portafolio Tech"
+      }
     },
     {
       "id": 80,
       "parent": 78,
-      "title": "Bitcoin"
+      "locales": {
+        "en": "Bitcoin",
+        "es": "Bitcoin"
+      }
     },
     {
       "id": 56,
       "parent": 49,
-      "title": "Angular"
+      "locales": {
+        "en": "Angular",
+        "es": "Angular"
+      }
+    },
+    {
+      "parent": null,
+      "locales": {
+        "en": "Test",
+        "es": "Prueba"
+      },
+      "title": "Test",
+      "id": 81
     }
   ]
 }

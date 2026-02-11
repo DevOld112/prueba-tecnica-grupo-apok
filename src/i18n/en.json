@@ -39,6 +39,8 @@
       "trigger": "New Node",
       "title": "Create Node",
       "name_label": "Name",
+      "name_en_label": "English Name",
+      "name_es_label": "Spanish Name",
       "placeholder": "Enter name",
       "cancel": "Cancel",
       "confirm": "Create",
