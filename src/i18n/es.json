@@ -12,5 +12,20 @@
     "toggle": "Cambiar tema",
     "light": "Modo claro",
     "dark": "Modo oscuro"
+  },
+  "errors": {
+    "fetch_parent": "Error al obtener nodos padres",
+    "fetch_children": "Error al obtener nodos hijos",
+    "create_node": "Error al crear el nodo",
+    "delete_node": "Error al eliminar el nodo",
+    "count_children": "Error al contar hijos",
+    "unknown": "Error desconocido",
+    "create_failed": "Fallo al crear el nodo",
+    "delete_failed": "Fallo al eliminar el nodo"
+  },
+  "home": {
+    "loading": "Cargando...",
+    "no_items": "No se encontraron elementos en esta carpeta.",
+    "confirm_delete": "¿Estás seguro?"
   }
 }
