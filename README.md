@@ -50,8 +50,7 @@ Sigue estos pasos para levantar el proyecto localmente.
 
 ### 1. Clonar e Instalar
 ```bash
-git clone [<URL_DEL_REPOSITORIO>](https://github.com/DevOld112/prueba-tecnica-grupo-apok)
-cd vite-project
+git clone https://github.com/DevOld112/prueba-tecnica-grupo-apok
 npm install
 ```
 
