@@ -58,10 +58,10 @@ export const useNodeStore = defineStore("nodes", () => {
     await fetchNodes();
   }
 
-  async function addNode(title: string) {
+  async function addNode(locales: Record<string, string>) {
     error.value = null;
     try {
-      await api.createNode(currentParentId.value, title);
+      await api.createNode(currentParentId.value, locales);
       await fetchNodes();
     } catch (e) {
       error.value =

@@ -36,12 +36,13 @@ export const getChildNodes = async (parentId: number): Promise<Node[]> => {
 
 export const createNode = async (
   parentId: number | null,
-  title: string,
+  locales: Record<string, string>,
 ): Promise<Node> => {
   try {
     const { data } = await api.post<Node>("/api/node", {
       parent: parentId,
-      title,
+      locales,
+      title: locales.en || locales.es || "", // Fallback title
     });
     return data;
   } catch (error) {
