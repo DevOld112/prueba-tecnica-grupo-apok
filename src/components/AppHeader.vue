@@ -22,9 +22,7 @@ function setLocale(lang: string) {
   <header
     class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60"
   >
-    <div
-      class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
-    >
+    <div class="container mx-auto flex h-16 items-center justify-between px-4">
       <div class="flex items-center gap-3">
         <div
           class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary"
@@ -47,7 +45,7 @@ function setLocale(lang: string) {
           id="theme-toggle"
           variant="outline"
           size="icon"
-          class="relative h-9 w-9 cursor-pointer"
+          class="relative h-9 w-9 cursor-pointer hover:bg-primary/10 hover:text-primary"
           :aria-label="t('theme.toggle')"
           @click="toggleTheme"
         >
@@ -68,7 +66,10 @@ function setLocale(lang: string) {
         <!-- Language Switcher -->
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
-            <Button variant="outline" size="sm" class="gap-2">
+            <Button
+              variant="outline"
+              class="gap-2 h-9 px-4 hover:bg-primary/10 hover:text-primary"
+            >
               <Globe class="h-4 w-4" />
               <span class="hidden sm:inline">{{
                 t(`language.${locale}`)

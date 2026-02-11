@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import AppHeader from "@/components/AppHeader.vue";
+import { useTitle } from "@vueuse/core";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { Toaster } from "vue-sonner";
+
+const { t } = useI18n();
+const title = computed(() => t("app.title"));
+useTitle(title);
 </script>
 
 <template>

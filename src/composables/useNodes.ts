@@ -6,8 +6,7 @@ import { toast } from "vue-sonner";
 
 export const useNodes = () => {
   const { t } = useI18n();
-  const nodeStore = useNodeStore();
-  const { addNode, removeNode, nodeHasChildren, navigateInto } = nodeStore;
+  const { addNode, removeNode, nodeHasChildren, navigateInto } = useNodeStore();
 
   const open = ref(false);
   const nameEn = ref("");

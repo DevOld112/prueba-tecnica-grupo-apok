@@ -14,6 +14,7 @@
     "dark": "Dark mode"
   },
   "errors": {
+    "title": "Error",
     "fetch_parent": "Error fetching parent nodes",
     "fetch_children": "Error fetching child nodes",
     "create_node": "Error creating node",
@@ -38,6 +39,7 @@
     "create_node": {
       "trigger": "New Node",
       "title": "Create Node",
+      "description": "Create a new node in the current location. Provide names in both English and Spanish.",
       "name_label": "Name",
       "name_en_label": "English Name",
       "name_es_label": "Spanish Name",
