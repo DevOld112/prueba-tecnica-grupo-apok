@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import AppHeader from "@/components/AppHeader.vue";
+import { Toaster } from "vue-sonner";
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">
-    {{ t("hello") }}
-  </h1>
-  <p>
-    Visit
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to
-    read the documentation
-  </p>
+  <div class="min-h-screen bg-background text-foreground">
+    <AppHeader />
+    <RouterView />
+    <Toaster position="top-right" :duration="4000" theme="dark" rich-colors />
+  </div>
 </template>

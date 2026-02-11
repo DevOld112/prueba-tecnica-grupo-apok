@@ -1,3 +1,48 @@
 {
-  "hello": "Hola Mundo"
+  "hello": "Hola Mundo",
+  "app": {
+    "title": "Explorador de Nodos",
+    "subtitle": "Visualiza y navega la estructura jerárquica"
+  },
+  "language": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  },
+  "errors": {
+    "fetch_parent": "Error al obtener nodos padres",
+    "fetch_children": "Error al obtener nodos hijos",
+    "create_node": "Error al crear el nodo",
+    "delete_node": "Error al eliminar el nodo",
+    "count_children": "Error al contar hijos",
+    "unknown": "Error desconocido",
+    "create_failed": "Fallo al crear el nodo",
+    "delete_failed": "Fallo al eliminar el nodo"
+  },
+  "home": {
+    "loading": "Cargando...",
+    "no_items": "No se encontraron elementos en esta carpeta.",
+    "confirm_delete": "¿Estás seguro?",
+    "deleted_success": "Nodo eliminado correctamente",
+    "delete_node": {
+      "title": "¿Eliminar Nodo?",
+      "description": "Esta acción no se puede deshacer. ¿Estás seguro de que deseas eliminar este nodo?",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar",
+      "has_children": "No se puede eliminar un nodo que contiene subnodos. Elimina primero los subnodos."
+    },
+    "create_node": {
+      "trigger": "Nuevo Nodo",
+      "title": "Crear Nodo",
+      "name_label": "Nombre",
+      "placeholder": "Ingresa el nombre",
+      "cancel": "Cancelar",
+      "confirm": "Crear",
+      "success": "Nodo creado correctamente"
+    }
+  }
 }
