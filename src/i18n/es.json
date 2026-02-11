@@ -32,7 +32,8 @@
       "title": "¿Eliminar Nodo?",
       "description": "Esta acción no se puede deshacer. ¿Estás seguro de que deseas eliminar este nodo?",
       "cancel": "Cancelar",
-      "confirm": "Eliminar"
+      "confirm": "Eliminar",
+      "has_children": "No se puede eliminar un nodo que contiene subnodos. Elimina primero los subnodos."
     },
     "create_node": {
       "trigger": "Nuevo Nodo",

@@ -32,7 +32,8 @@
       "title": "Delete Node?",
       "description": "This action cannot be undone. Are you sure you want to delete this node?",
       "cancel": "Cancel",
-      "confirm": "Delete"
+      "confirm": "Delete",
+      "has_children": "Cannot delete a node that contains subnodes. Please delete the subnodes first."
     },
     "create_node": {
       "trigger": "New Node",

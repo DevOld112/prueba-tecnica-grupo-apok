@@ -30,6 +30,13 @@ const handleDelete = async (e: Event) => {
   e.preventDefault(); // Prevent auto-closing
   loading.value = true;
   try {
+    const hasChildren = await store.nodeHasChildren(props.nodeId);
+    if (hasChildren) {
+      toast.error(t("home.delete_node.has_children"));
+      open.value = false;
+      return;
+    }
+
     await removeNode(props.nodeId);
     toast.success(t("home.deleted_success"));
     open.value = false;
