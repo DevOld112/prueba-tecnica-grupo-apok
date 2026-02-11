@@ -28,6 +28,12 @@
     "no_items": "No se encontraron elementos en esta carpeta.",
     "confirm_delete": "¿Estás seguro?",
     "deleted_success": "Nodo eliminado correctamente",
+    "delete_node": {
+      "title": "¿Eliminar Nodo?",
+      "description": "Esta acción no se puede deshacer. ¿Estás seguro de que deseas eliminar este nodo?",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    },
     "create_node": {
       "trigger": "Nuevo Nodo",
       "title": "Crear Nodo",

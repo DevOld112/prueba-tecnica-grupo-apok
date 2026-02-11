@@ -59,9 +59,12 @@ export const deleteNode = async (id: number): Promise<void> => {
     await api.delete(`/nodes/${id}`);
   } catch (error) {
     if (isAxiosError(error)) {
-      throw new Error(
-        error.response?.data?.error || i18n.global.t("errors.delete_node"),
-      );
+      const message =
+        error.response?.data?.error ||
+        (error.response?.statusText
+          ? `${i18n.global.t("errors.delete_node")} (${error.response.statusText})`
+          : i18n.global.t("errors.delete_node"));
+      throw new Error(message);
     }
     throw error;
   }

@@ -28,9 +28,15 @@
     "no_items": "No items found in this folder.",
     "confirm_delete": "Are you sure?",
     "deleted_success": "Node deleted successfully",
+    "delete_node": {
+      "title": "Delete Node?",
+      "description": "This action cannot be undone. Are you sure you want to delete this node?",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
     "create_node": {
-      "trigger": "New Wrapper",
-      "title": "Create Wrapper",
+      "trigger": "New Node",
+      "title": "Create Node",
       "name_label": "Name",
       "placeholder": "Enter name",
       "cancel": "Cancel",
