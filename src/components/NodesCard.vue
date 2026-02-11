@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import DeleteNodeDialog from "@/components/DeleteNodeDialog.vue";
 import { Button } from "@/components/ui/button";
 import { useNodeStore } from "@/stores/nodes";
 import type { Node } from "@/types";
@@ -12,24 +13,13 @@ const props = defineProps<{
 
 const { t } = useI18n();
 const store = useNodeStore();
-const { navigateInto, removeNode } = store;
+const { navigateInto } = store;
 
 const handleNavigate = async () => {
   try {
     await navigateInto(props.node);
   } catch (e) {
     toast.error(e instanceof Error ? e.message : t("errors.unknown"));
-  }
-};
-
-const handleDelete = async () => {
-  if (confirm(t("home.confirm_delete"))) {
-    try {
-      await removeNode(props.node.id);
-      toast.success(t("home.deleted_success"));
-    } catch (e) {
-      toast.error(e instanceof Error ? e.message : t("errors.delete_failed"));
-    }
   }
 };
 </script>
@@ -47,13 +37,15 @@ const handleDelete = async () => {
       <span class="font-medium">{{ node.title }}</span>
     </div>
 
-    <Button
-      variant="ghost"
-      size="icon"
-      @click.stop="handleDelete"
-      class="text-muted-foreground hover:text-destructive"
-    >
-      <Trash2 class="w-4 h-4" />
-    </Button>
+    <DeleteNodeDialog :nodeId="node.id">
+      <Button
+        variant="ghost"
+        size="icon"
+        class="text-muted-foreground hover:text-destructive"
+        @click.stop
+      >
+        <Trash2 class="w-4 h-4" />
+      </Button>
+    </DeleteNodeDialog>
   </div>
 </template>
