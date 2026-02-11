@@ -12,5 +12,15 @@
     "toggle": "Toggle theme",
     "light": "Light mode",
     "dark": "Dark mode"
+  },
+  "errors": {
+    "fetch_parent": "Error fetching parent nodes",
+    "fetch_children": "Error fetching child nodes",
+    "create_node": "Error creating node",
+    "delete_node": "Error deleting node",
+    "count_children": "Error counting children",
+    "unknown": "Unknown error",
+    "create_failed": "Failed to create node",
+    "delete_failed": "Failed to delete node"
   }
 }
