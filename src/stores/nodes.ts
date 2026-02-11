@@ -35,7 +35,11 @@ export const useNodeStore = defineStore("nodes", () => {
 
   async function navigateInto(node: Node) {
     currentParentId.value = node.id;
-    breadcrumb.value.push({ id: node.id, title: node.title });
+    breadcrumb.value.push({
+      id: node.id,
+      title: node.title,
+      locales: node.locales,
+    });
     await fetchNodes();
   }
 

@@ -20,17 +20,16 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
-const store = useNodeStore();
-const { removeNode } = store;
+const { removeNode, nodeHasChildren } = useNodeStore();
 
 const open = ref(false);
 const loading = ref(false);
 
 const handleDelete = async (e: Event) => {
-  e.preventDefault(); // Prevent auto-closing
+  e.preventDefault();
   loading.value = true;
   try {
-    const hasChildren = await store.nodeHasChildren(props.nodeId);
+    const hasChildren = await nodeHasChildren(props.nodeId);
     if (hasChildren) {
       toast.error(t("home.delete_node.has_children"));
       open.value = false;

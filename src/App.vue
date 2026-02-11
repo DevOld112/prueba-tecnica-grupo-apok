@@ -7,6 +7,6 @@ import { Toaster } from "vue-sonner";
   <div class="min-h-screen bg-background text-foreground">
     <AppHeader />
     <RouterView />
-    <Toaster position="top-right" :duration="4000" theme="dark" rich-colors />
+    <Toaster position="top-right" theme="dark" rich-colors :duration="4000" />
   </div>
 </template>
