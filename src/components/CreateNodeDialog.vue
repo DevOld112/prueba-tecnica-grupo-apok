@@ -11,40 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useNodeStore } from "@/stores/nodes";
+import { useNodes } from "@/composables/useNodes";
 import { Plus } from "lucide-vue-next";
-import { ref } from "vue";
 import { useI18n } from "vue-i18n";
-import { toast } from "vue-sonner";
 
 const { t } = useI18n();
-const store = useNodeStore();
-const { addNode } = store;
+const { open, loading, handleCreate, nameEn, nameEs } = useNodes()
 
-const open = ref(false);
-const nameEn = ref("");
-const nameEs = ref("");
-const loading = ref(false);
-
-const handleCreate = async () => {
-  if (!nameEn.value.trim() || !nameEs.value.trim()) return;
-
-  loading.value = true;
-  try {
-    await addNode({
-      en: nameEn.value,
-      es: nameEs.value,
-    });
-    toast.success(t("home.create_node.success"));
-    nameEn.value = "";
-    nameEs.value = "";
-    open.value = false;
-  } catch (e) {
-    toast.error(e instanceof Error ? e.message : t("errors.create_failed"));
-  } finally {
-    loading.value = false;
-  }
-};
 </script>
 
 <template>

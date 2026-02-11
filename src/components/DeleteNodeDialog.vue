@@ -10,43 +10,15 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useNodeStore } from "@/stores/nodes";
-import { ref } from "vue";
+import { useNodes } from "@/composables/useNodes";
 import { useI18n } from "vue-i18n";
-import { toast } from "vue-sonner";
 
 const props = defineProps<{
   nodeId: number;
 }>();
 
 const { t } = useI18n();
-const { removeNode, nodeHasChildren } = useNodeStore();
-
-const open = ref(false);
-const loading = ref(false);
-
-const handleDelete = async (e: Event) => {
-  e.preventDefault();
-  loading.value = true;
-  try {
-    const hasChildren = await nodeHasChildren(props.nodeId);
-    if (hasChildren) {
-      toast.error(t("home.delete_node.has_children"));
-      open.value = false;
-      return;
-    }
-
-    await removeNode(props.nodeId);
-    toast.success(t("home.deleted_success"));
-    open.value = false;
-  } catch (error) {
-    toast.error(
-      error instanceof Error ? error.message : t("errors.delete_failed"),
-    );
-  } finally {
-    loading.value = false;
-  }
-};
+const { open, loading, handleDelete } = useNodes();
 </script>
 
 <template>
@@ -66,7 +38,7 @@ const handleDelete = async (e: Event) => {
           {{ t("home.delete_node.cancel") }}
         </AlertDialogCancel>
         <AlertDialogAction
-          @click="handleDelete"
+          @click="(e: Event) => handleDelete(e, props.nodeId)"
           :disabled="loading"
           class="bg-destructive text-destructive-foreground hover:bg-destructive/90"
         >
