@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CreateNodeDialog from "@/components/CreateNodeDialog.vue";
 import NodesCard from "@/components/NodesCard.vue";
 import {
   Breadcrumb,
@@ -33,33 +34,40 @@ const handleRootClick = () => {
 
 <template>
   <div class="container mx-auto p-4 space-y-6">
-    <!-- Breadcrumb -->
-    <Breadcrumb>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="#" @click.prevent="handleRootClick">
-            <Home class="w-4 h-4" />
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator v-if="breadcrumb.length > 0" />
-
-        <template v-for="(item, index) in breadcrumb" :key="item.id || 'root'">
+    <div class="flex items-center justify-between">
+      <!-- Breadcrumb -->
+      <Breadcrumb>
+        <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink
-              v-if="index < breadcrumb.length - 1"
-              href="#"
-              @click.prevent="handleBreadcrumbClick(item)"
-            >
-              {{ item.title }}
+            <BreadcrumbLink href="#" @click.prevent="handleRootClick">
+              <Home class="w-4 h-4" />
             </BreadcrumbLink>
-            <BreadcrumbPage v-else>
-              {{ item.title }}
-            </BreadcrumbPage>
           </BreadcrumbItem>
-          <BreadcrumbSeparator v-if="index < breadcrumb.length - 1" />
-        </template>
-      </BreadcrumbList>
-    </Breadcrumb>
+          <BreadcrumbSeparator v-if="breadcrumb.length > 0" />
+
+          <template
+            v-for="(item, index) in breadcrumb"
+            :key="item.id || 'root'"
+          >
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                v-if="index < breadcrumb.length - 1"
+                href="#"
+                @click.prevent="handleBreadcrumbClick(item)"
+              >
+                {{ item.title }}
+              </BreadcrumbLink>
+              <BreadcrumbPage v-else>
+                {{ item.title }}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator v-if="index < breadcrumb.length - 1" />
+          </template>
+        </BreadcrumbList>
+      </Breadcrumb>
+
+      <CreateNodeDialog />
+    </div>
 
     <!-- Node List -->
     <div v-if="loading" class="text-center py-4 text-muted-foreground">

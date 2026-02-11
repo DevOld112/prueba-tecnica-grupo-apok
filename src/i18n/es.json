@@ -27,6 +27,15 @@
     "loading": "Cargando...",
     "no_items": "No se encontraron elementos en esta carpeta.",
     "confirm_delete": "¿Estás seguro?",
-    "deleted_success": "Nodo eliminado correctamente"
+    "deleted_success": "Nodo eliminado correctamente",
+    "create_node": {
+      "trigger": "Nuevo Nodo",
+      "title": "Crear Nodo",
+      "name_label": "Nombre",
+      "placeholder": "Ingresa el nombre",
+      "cancel": "Cancelar",
+      "confirm": "Crear",
+      "success": "Nodo creado correctamente"
+    }
   }
 }

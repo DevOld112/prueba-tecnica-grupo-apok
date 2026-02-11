@@ -27,6 +27,15 @@
     "loading": "Loading...",
     "no_items": "No items found in this folder.",
     "confirm_delete": "Are you sure?",
-    "deleted_success": "Node deleted successfully"
+    "deleted_success": "Node deleted successfully",
+    "create_node": {
+      "trigger": "New Wrapper",
+      "title": "Create Wrapper",
+      "name_label": "Name",
+      "placeholder": "Enter name",
+      "cancel": "Cancel",
+      "confirm": "Create",
+      "success": "Node created successfully"
+    }
   }
 }
