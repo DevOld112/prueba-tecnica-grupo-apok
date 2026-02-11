@@ -16,8 +16,7 @@ import { Plus } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
-const { open, loading, handleCreate, nameEn, nameEs } = useNodes()
-
+const { open, loading, handleCreate, nameEn, nameEs } = useNodes();
 </script>
 
 <template>
@@ -32,7 +31,7 @@ const { open, loading, handleCreate, nameEn, nameEs } = useNodes()
       <DialogHeader>
         <DialogTitle>{{ t("home.create_node.title") }}</DialogTitle>
         <DialogDescription>
-          <!-- Optional description if needed -->
+          {{ t("home.create_node.description") }}
         </DialogDescription>
       </DialogHeader>
       <div class="grid gap-4 py-4">

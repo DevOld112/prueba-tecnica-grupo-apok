@@ -38,6 +38,7 @@
     "create_node": {
       "trigger": "Nuevo Nodo",
       "title": "Crear Nodo",
+      "description": "Crea un nuevo nodo en la ubicación actual. Proporciona nombres en Inglés y Español.",
       "name_label": "Nombre",
       "name_en_label": "Nombre (Inglés)",
       "name_es_label": "Nombre (Español)",
