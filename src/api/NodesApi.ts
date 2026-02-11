@@ -5,8 +5,8 @@ import { isAxiosError } from "axios";
 
 export const getParentNodes = async (): Promise<Node[]> => {
   try {
-    const { data } = await api.get<Node[]>("/nodes?parent=null");
-    return data;
+    const { data } = await api.get<Node[]>("/nodes");
+    return data.filter((node) => node.parent === null);
   } catch (error) {
     if (isAxiosError(error)) {
       throw new Error(
@@ -19,8 +19,11 @@ export const getParentNodes = async (): Promise<Node[]> => {
 
 export const getChildNodes = async (parentId: number): Promise<Node[]> => {
   try {
-    const { data } = await api.get<Node[]>(`/nodes?parent=${parentId}`);
-    return data;
+    const { data } = await api.get<Node[]>("/nodes", {
+      params: { parent: parentId },
+    });
+    // Fallback client-side filtering in case json-server ignores params
+    return data.filter((node) => node.parent === parentId);
   } catch (error) {
     if (isAxiosError(error)) {
       throw new Error(
@@ -67,7 +70,8 @@ export const deleteNode = async (id: number): Promise<void> => {
 export const countChildren = async (id: number): Promise<number> => {
   try {
     const { data } = await api.get<Node[]>(`/nodes?parent=${id}`);
-    return data.length;
+    const filtered = data.filter((node) => node.parent === id);
+    return filtered.length;
   } catch (error) {
     if (isAxiosError(error)) {
       throw new Error(

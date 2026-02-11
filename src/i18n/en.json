@@ -22,5 +22,10 @@
     "unknown": "Unknown error",
     "create_failed": "Failed to create node",
     "delete_failed": "Failed to delete node"
+  },
+  "home": {
+    "loading": "Loading...",
+    "no_items": "No items found in this folder.",
+    "confirm_delete": "Are you sure?"
   }
 }

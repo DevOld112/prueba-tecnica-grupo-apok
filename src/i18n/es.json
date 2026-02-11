@@ -22,5 +22,10 @@
     "unknown": "Error desconocido",
     "create_failed": "Fallo al crear el nodo",
     "delete_failed": "Fallo al eliminar el nodo"
+  },
+  "home": {
+    "loading": "Cargando...",
+    "no_items": "No se encontraron elementos en esta carpeta.",
+    "confirm_delete": "¿Estás seguro?"
   }
 }
