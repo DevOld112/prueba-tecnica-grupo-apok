@@ -26,6 +26,7 @@
   "home": {
     "loading": "Loading...",
     "no_items": "No items found in this folder.",
-    "confirm_delete": "Are you sure?"
+    "confirm_delete": "Are you sure?",
+    "deleted_success": "Node deleted successfully"
   }
 }

@@ -26,6 +26,7 @@
   "home": {
     "loading": "Cargando...",
     "no_items": "No se encontraron elementos en esta carpeta.",
-    "confirm_delete": "¿Estás seguro?"
+    "confirm_delete": "¿Estás seguro?",
+    "deleted_success": "Nodo eliminado correctamente"
   }
 }
